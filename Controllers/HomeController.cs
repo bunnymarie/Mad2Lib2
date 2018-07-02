@@ -15,8 +15,8 @@ namespace Madlibs.Controllers
         {
             return View();
         }
-        [Route("/my_mad_libs")]
-        public ActionResult MyMadLib()
+        [Route("/MyMadlib")]
+        public ActionResult MyMadlib()
         {
             MadlibVariable myMadLibVariable = new MadlibVariable();
             myMadLibVariable.SetPersonOne(Request.Query["person-one"]);
@@ -27,6 +27,7 @@ namespace Madlibs.Controllers
             myMadLibVariable.SetAnimal(Request.Query["animal-one"]);
             myMadLibVariable.SetExclamation(Request.Query["exclamation-one"]);
             myMadLibVariable.SetActivity(Request.Query["activity-one"]);
+            return View("MyMadlib", myMadLibVariable);
 
         }
     }

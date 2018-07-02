@@ -46,7 +46,7 @@ namespace Madlibs.Models
     {
         return _animal;
     }
-    public void SetAnimal(string newanimal)
+    public void SetAnimal(string newAnimal)
     {
         _animal = newAnimal;
     }

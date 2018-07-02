@@ -18,12 +18,13 @@ namespace Madlibs
 
     public IConfigurationRoot Configuration { get; }
 
-    public void ConfigureService(IServiceCollection services)
+    public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc();
     }
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();
       app.UseMvc(routes =>
       {
         routes.MapRoute(
